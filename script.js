@@ -20,7 +20,7 @@ function applyRotation(){
 }
 
 function setRotatingAngle(engine_angle){
-    rotating_angle = +rotating_angle + +engine_angle;
+    rotating_angle = (+rotating_angle + +engine_angle)%361;
 }
 
 
