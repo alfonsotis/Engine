@@ -1,7 +1,7 @@
-var rotating_angle = +0;
+var current_engine_angle = +0;
 
 function resetAngle(){
-    rotating_angle = +0;
+    current_engine_angle = +0;
     document.getElementById("angle").value = 0;
     applyRotation();
 }
@@ -16,16 +16,16 @@ function getEngine(){
 
 function applyRotation(){
     motor = getEngine();
-    motor.style.transform = `rotate(${rotating_angle}deg)`;
+    motor.style.transform = `rotate(${current_engine_angle}deg)`;
 }
 
-function setRotatingAngle(engine_angle){
-    rotating_angle = (+rotating_angle + +engine_angle)%361;
+function setRotatingAngle(next_engine_angle){
+    current_engine_angle = (+current_engine_angle + +next_engine_angle)%361;
 }
 
 
 function rotateEngine(){
-    engine_angle = getAngle();
+    next_engine_angle = getAngle();
     setRotatingAngle(engine_angle);
     applyRotation();
 }
