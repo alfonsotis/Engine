@@ -26,6 +26,6 @@ function setRotatingAngle(next_engine_angle){
 
 function rotateEngine(){
     next_engine_angle = getAngle();
-    setRotatingAngle(engine_angle);
+    setRotatingAngle(next_engine_angle);
     applyRotation();
 }
