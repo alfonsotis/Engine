@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candela Engine</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="engine_container">
         <input type="number" placeholder="0 - 360 degrees" id="angle"/>
-        <button onclick="rotate()">Rotate</button>        
+        <button onclick="rotateEngine()">Rotate</button>        
+        <button onclick="resetAngle()">Reset</button>        
     </div>
     <img src="engine.svg" alt="engine" id="engine">
 </body>
